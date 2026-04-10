@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard | StudyConnectIndia</title>
+  <title>Tutor Profile Submitted | StudyConnectIndia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/responsive.css">
 </head>
-<body data-page="admin">
+<body>
   <header class="site-header">
     <div class="container navbar">
       <a class="brand" href="/index.html">
@@ -39,46 +39,22 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <span class="eyebrow">Admin Mock Dashboard</span>
-        <h1>Preview incoming tutor requests and tutor registrations.</h1>
-        <p>This is a frontend-only dashboard mockup with sample cards and tab filtering.</p>
+        <span class="eyebrow">Profile Submitted</span>
+        <h1>Your tutor profile has been submitted successfully.</h1>
+        <p>Thank you for registering with StudyConnectIndia. We will review your profile and reach out when a suitable student requirement matches your expertise.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container admin-layout">
-        <aside class="card dashboard-card">
-          <h2>Dashboard Snapshot</h2>
-          <div class="grid">
-            <div class="mini-stat">
-              <strong>3</strong>
-              <span>Tutor Requests</span>
-            </div>
-            <div class="mini-stat">
-              <strong>3</strong>
-              <span>Tutor Registrations</span>
-            </div>
-            <div class="mini-stat">
-              <strong>2</strong>
-              <span>Locations Active</span>
-            </div>
+      <div class="container">
+        <div class="card form-card" style="text-align: center; max-width: 760px; margin: 0 auto;">
+          <h2>Thank you for joining</h2>
+          <p class="text-muted">You can now return to the homepage, browse tutor listings, or submit another profile if needed.</p>
+          <div class="button-row" style="justify-content: center;">
+            <a class="btn btn-primary" href="/index.html">Go to Home</a>
+            <a class="btn btn-secondary" href="/pages/become-tutor.html">Submit Another Profile</a>
           </div>
-        </aside>
-
-        <section class="card dashboard-card">
-          <div class="tabs">
-            <button class="tab-button active" type="button" data-admin-tab="requests">Tutor Requests</button>
-            <button class="tab-button" type="button" data-admin-tab="registrations">Tutor Registrations</button>
-          </div>
-
-          <div data-tab-panel="requests">
-            <div id="request-cards" class="grid"></div>
-          </div>
-
-          <div data-tab-panel="registrations" class="hidden">
-            <div id="registration-cards" class="grid"></div>
-          </div>
-        </section>
+        </div>
       </div>
     </section>
   </main>
@@ -103,8 +79,8 @@
       </div>
       <div>
         <h3>Contact</h3>
-        <a href="tel:+919999999999">+91 99999 99999</a>
-        <a href="mailto:hello@studyconnectindia.in">hello@studyconnectindia.in</a>
+        <a href="tel:+916306547226">+91 63065 47226</a>
+        <a href="mailto:hmishra2227@gmail.com">hmishra2227@gmail.com</a>
         <a href="/pages/contact.html">Lucknow, Uttar Pradesh</a>
       </div>
     </div>
@@ -113,9 +89,6 @@
     </div>
   </footer>
 
-  <script src="/js/data.js"></script>
   <script src="/js/main.js"></script>
-  <script src="/js/admin.js"></script>
 </body>
 </html>
-

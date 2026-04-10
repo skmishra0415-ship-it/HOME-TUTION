@@ -10,15 +10,6 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/responsive.css">
   <style>
-    .request-helper {
-      margin-top: 0.85rem;
-      color: #5a6883;
-    }
-
-    .request-helper strong {
-      color: #16315f;
-    }
-
     .form-submit-row {
       display: flex;
       align-items: center;
@@ -73,7 +64,7 @@
       <nav class="site-nav">
         <a href="/index.html" data-nav="home">Home</a>
         <a href="/pages/find-tutor.html" data-nav="find-tutor">Find Tutor</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScJpb0TBqklEUndhGc2BqNl_4LO4guKqnbLv4Afjw5s_T1DOA/viewform?usp=publish-editor" data-nav="become-tutor" target="_blank" rel="noopener noreferrer">Become a Tutor</a>
+        <a href="/pages/become-tutor.html" data-nav="become-tutor">Become a Tutor</a>
         <a href="/pages/about.html" data-nav="about">About</a>
         <a href="/pages/contact.html" data-nav="contact">Contact</a>
         <a class="btn btn-sm btn-primary" href="/pages/request-tutor.html">Request Tutor</a>
@@ -168,7 +159,6 @@
               <button class="btn btn-primary request-submit" type="submit">
                 <span class="submit-label">Submit Request</span>
               </button>
-              <span class="request-helper"><strong>Email delivery:</strong> this request will be sent to hmishra2227@gmail.com.</span>
             </div>
           </form>
           <div class="success-message hidden"></div>
@@ -193,7 +183,7 @@
         <h3>Quick Links</h3>
         <a href="/pages/find-tutor.html">Find Tutor</a>
         <a href="/pages/request-tutor.html">Request Tutor</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScJpb0TBqklEUndhGc2BqNl_4LO4guKqnbLv4Afjw5s_T1DOA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Become a Tutor</a>
+        <a href="/pages/become-tutor.html">Become a Tutor</a>
       </div>
       <div>
         <h3>Contact</h3>
@@ -297,7 +287,7 @@
 
           form.reset();
           successBox.classList.remove("hidden");
-          successBox.textContent = "Request submitted successfully. Please check hmishra2227@gmail.com for the incoming enquiry.";
+          successBox.textContent = "Request submitted successfully.";
         } catch (error) {
           window.alert("The request could not be sent right now. Please try again in a moment.");
         } finally {
@@ -308,3 +298,4 @@
   </script>
 </body>
 </html>
+
