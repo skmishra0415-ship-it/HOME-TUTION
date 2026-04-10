@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Tutor | StudyConnectIndia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="request-tutor">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="../index.html">
+        <img class="brand-mark" src="../assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+        <span class="brand-name">
+          <span class="brand-title">StudyConnectIndia</span>
+          <span class="brand-tagline">Learn locally. Grow confidently.</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="../index.html" data-nav="home">Home</a>
+        <a href="../pages/find-tutor.html" data-nav="find-tutor">Find Tutor</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScJpb0TBqklEUndhGc2BqNl_4LO4guKqnbLv4Afjw5s_T1DOA/viewform?usp=publish-editor" data-nav="become-tutor" target="_blank" rel="noopener noreferrer">Become a Tutor</a>
+        <a href="../pages/about.html" data-nav="about">About</a>
+        <a href="../pages/contact.html" data-nav="contact">Contact</a>
+        <a class="btn btn-sm btn-primary" href="../pages/request-tutor.html">Request Tutor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Tutor Request Form</span>
+        <h1>Share your requirement and we will help match a suitable tutor.</h1>
+        <p>This MVP form validates on the frontend and is ready to connect to a future backend.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card form-card">
+          <div id="selected-tutor-summary" class="success-message hidden"></div>
+          <form id="request-tutor-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="request-name">Name</label>
+                <input id="request-name" name="name" type="text" placeholder="Parent or student name">
+              </div>
+              <div class="form-group">
+                <label for="request-phone">Phone</label>
+                <input id="request-phone" name="phone" type="tel" placeholder="10-digit mobile number">
+              </div>
+              <div class="form-group">
+                <label for="request-class">Class</label>
+                <select id="request-class" name="classLevel">
+                  <option value="">Select class</option>
+                  <option>Class 4</option>
+                  <option>Class 5</option>
+                  <option>Class 6</option>
+                  <option>Class 7</option>
+                  <option>Class 8</option>
+                  <option>Class 9</option>
+                  <option>Class 10</option>
+                  <option>Class 11</option>
+                  <option>Class 12</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="request-subject">Subject</label>
+                <select id="request-subject" name="subject">
+                  <option value="">Select subject</option>
+                  <option>Math</option>
+                  <option>Science</option>
+                  <option>English</option>
+                  <option>Physics</option>
+                  <option>Chemistry</option>
+                  <option>Biology</option>
+                  <option>Commerce</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="request-area">Area</label>
+                <input id="request-area" name="area" type="text" placeholder="Gomti Nagar, Aliganj, Basti">
+              </div>
+              <div class="form-group">
+                <label for="request-timing">Preferred Timing</label>
+                <select id="request-timing" name="timing">
+                  <option value="">Select timing</option>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+                  <option>Weekend</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="request-budget">Budget</label>
+                <input id="request-budget" name="budget" type="text" placeholder="₹800 - ₹1,000 per month">
+              </div>
+              <div class="form-group">
+                <label for="request-message">Message</label>
+                <input id="request-message" name="message" type="text" placeholder="Any extra preference">
+              </div>
+            </div>
+            <div class="button-row">
+              <button class="btn btn-primary" type="submit">Submit Request</button>
+            </div>
+          </form>
+          <div class="success-message hidden"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="../index.html">
+          <img class="brand-mark" src="../assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+          <span class="brand-name">
+            <span class="brand-title">StudyConnectIndia</span>
+            <span class="brand-tagline">Learn locally. Grow confidently.</span>
+          </span>
+        </a>
+        <p>Helping families connect with trusted offline home tutors in Uttar Pradesh.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="../pages/find-tutor.html">Find Tutor</a>
+        <a href="../pages/request-tutor.html">Request Tutor</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScJpb0TBqklEUndhGc2BqNl_4LO4guKqnbLv4Afjw5s_T1DOA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Become a Tutor</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+919999999999">+91 99999 99999</a>
+        <a href="mailto:hello@studyconnectindia.in">hello@studyconnectindia.in</a>
+        <a href="../pages/contact.html">Lucknow, Uttar Pradesh</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> StudyConnectIndia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/tutors.js"></script>
+  <script src="../js/form.js"></script>
+</body>
+</html>

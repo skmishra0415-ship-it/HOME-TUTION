@@ -1,0 +1,15 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+
+# Log files
+*.log
+
+# Node modules if added later
+node_modules/
+
+# Netlify cache
+.netlify/
