@@ -66,6 +66,7 @@ function createTutorCardHTML(tutor) {
       <div class="meta-list">
         <span><strong>Classes:</strong> ${tutor.classes}</span>
         <span><strong>Area:</strong> ${tutor.area}, ${tutor.location}</span>
+        <span><strong>Mode:</strong> ${tutor.teachingMode || "Offline"}</span>
         <span><strong>Fees:</strong> ${formatCurrency(tutor.budget)} / month</span>
         <span><strong>Experience:</strong> ${tutor.experience} years</span>
       </div>
