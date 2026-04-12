@@ -15,7 +15,7 @@ function renderFeaturedTutors() {
 
   const featuredTutors = tutorsData.slice(0, 3);
   container.innerHTML = featuredTutors
-    .map((tutor) => createTutorCardHTML(tutor).replaceAll("../pages/", "pages/"))
+    .map((tutor) => createTutorCardHTML(tutor))
     .join("");
 }
 
@@ -135,7 +135,7 @@ function renderTutorProfilePage() {
         <div class="card profile-card sidebar-box">
           <h3>Take the next step</h3>
           <div class="button-row">
-            <a class="btn btn-primary" href="../pages/request-tutor.html?id=${tutor.id}" data-tutor-id="${tutor.id}">Request Tutor</a>
+            <a class="btn btn-primary" href="/student.html?id=${tutor.id}" data-tutor-id="${tutor.id}">Request Tutor</a>
             <a class="btn btn-secondary" href="https://wa.me/${tutor.whatsapp}" target="_blank" rel="noopener noreferrer">WhatsApp Tutor</a>
           </div>
         </div>
