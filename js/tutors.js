@@ -125,6 +125,10 @@ function renderTutorProfilePage() {
           <div class="detail-item"><strong>Availability</strong><br>${tutor.availability}</div>
           <div class="detail-item"><strong>Languages</strong><br>${tutor.languages}</div>
           <div class="detail-item"><strong>Subjects</strong><br>${tutor.subject.join(", ")}</div>
+          <div class="detail-item"><strong>Gender</strong><br>${tutor.gender || "Not specified"}</div>
+          <div class="detail-item"><strong>Teaching Mode</strong><br>${tutor.teachingMode || "Offline"}</div>
+          <div class="detail-item"><strong>Phone</strong><br>${tutor.phone || "Available on request"}</div>
+          <div class="detail-item"><strong>Email</strong><br>${tutor.email || "Available on request"}</div>
         </div>
       </section>
       <aside class="sticky-card">
@@ -140,6 +144,7 @@ function renderTutorProfilePage() {
           <div class="profile-list">
             <span><strong>Classes:</strong> ${tutor.classes}</span>
             <span><strong>Area:</strong> ${tutor.area}</span>
+            <span><strong>Mode:</strong> ${tutor.teachingMode || "Offline"}</span>
             <span><strong>Best For:</strong> ${tutor.subject.join(", ")}</span>
           </div>
         </div>
@@ -165,6 +170,6 @@ function prefillTutorRequestSummary() {
   summaryBox.classList.remove("hidden");
   summaryBox.innerHTML = `
     <strong>Selected Tutor:</strong> ${tutor.name}<br>
-    <span class="text-muted">${tutor.subject.join(", ")} | ${tutor.area}, ${tutor.location} | ${formatCurrency(tutor.budget)} / month</span>
+    <span class="text-muted">${tutor.subject.join(", ")} | ${tutor.area}, ${tutor.location} | ${tutor.teachingMode || "Offline"} | ${formatCurrency(tutor.budget)} / month</span>
   `;
 }

@@ -1,154 +1,158 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find a Tutor | StudyConnectIndia</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-</head>
-<body data-page="find-tutor">
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="/index.html">
-        <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
-        <span class="brand-name">
-          <span class="brand-title">StudyConnectIndia</span>
-          <span class="brand-tagline">Learn locally. Grow confidently.</span>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav">
-        <a href="/index.html" data-nav="home">Home</a>
-        <a href="/pages/find-tutor.html" data-nav="find-tutor">Find Tutor</a>
-        <a href="/pages/become-tutor.html" data-nav="become-tutor">Become a Tutor</a>
-        <a href="/pages/about.html" data-nav="about">About</a>
-        <a href="/pages/contact.html" data-nav="contact">Contact</a>
-        <a class="btn btn-sm btn-primary" href="/pages/request-tutor.html">Request Tutor</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">Tutor Discovery</span>
-        <h1>Browse home tutors by class, subject, area, and budget.</h1>
-        <p>Use the filters below to shortlist tutors for offline tuition in your area through StudyConnectIndia.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container search-layout">
-        <aside class="card filter-panel">
-          <h2>Search Filters</h2>
-          <div class="form-grid">
-            <div class="form-group full-width">
-              <label for="filter-class">Class</label>
-              <select id="filter-class">
-                <option value="">All classes</option>
-                <option value="class 4">Class 4-7</option>
-                <option value="class 5">Class 5-8</option>
-                <option value="class 6">Class 6-10</option>
-                <option value="class 8">Class 8-12</option>
-                <option value="class 9">Class 9-12</option>
-                <option value="class 10">Class 10-12</option>
-                <option value="class 11">Class 11-12</option>
-              </select>
-            </div>
-            <div class="form-group full-width">
-              <label for="filter-subject">Subject</label>
-              <select id="filter-subject">
-                <option value="">All subjects</option>
-                <option value="Math">Math</option>
-                <option value="Science">Science</option>
-                <option value="English">English</option>
-                <option value="Physics">Physics</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Biology">Biology</option>
-                <option value="Commerce">Commerce</option>
-              </select>
-            </div>
-            <div class="form-group full-width">
-              <label for="filter-location">Location</label>
-              <select id="filter-location">
-                <option value="">All locations</option>
-                <option value="Lucknow">Lucknow</option>
-                <option value="Ayodhya">Ayodhya</option>
-                <option value="Basti">Basti</option>
-                <option value="Gomti Nagar">Gomti Nagar</option>
-                <option value="Aliganj">Aliganj</option>
-                <option value="Indira Nagar">Indira Nagar</option>
-              </select>
-            </div>
-            <div class="form-group full-width">
-              <label for="filter-budget">Maximum Budget (per month)</label>
-              <select id="filter-budget">
-                <option value="">Any budget</option>
-                <option value="700">Up to ₹700</option>
-                <option value="850">Up to ₹850</option>
-                <option value="1000">Up to ₹1,000</option>
-                <option value="1200">Up to ₹1,200</option>
-              </select>
-            </div>
-          </div>
-          <div class="filter-actions">
-            <button id="reset-filters" class="btn btn-secondary" type="button">Reset Filters</button>
-          </div>
-        </aside>
-
-        <section class="card results-panel">
-          <div class="section-heading align-left">
-            <span class="eyebrow">Available Tutors</span>
-            <h2>Local tutor matches</h2>
-            <p>Profiles are loaded dynamically from the sample data file.</p>
-          </div>
-          <div id="tutor-list" class="grid two-column"></div>
-        </section>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand brand-footer" href="/index.html">
-          <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
-          <span class="brand-name">
-            <span class="brand-title">StudyConnectIndia</span>
-            <span class="brand-tagline">Learn locally. Grow confidently.</span>
-          </span>
-        </a>
-        <p>Helping families connect with trusted offline home tutors across Uttar Pradesh through the StudyConnectIndia network.</p>
-      </div>
-      <div>
-        <h3>Quick Links</h3>
-        <a href="/pages/find-tutor.html">Find Tutor</a>
-        <a href="/pages/request-tutor.html">Request Tutor</a>
-        <a href="/pages/become-tutor.html">Become a Tutor</a>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="tel:+919999999999">+91 99999 99999</a>
-        <a href="mailto:hello@studyconnectindia.in">hello@studyconnectindia.in</a>
-        <a href="/pages/contact.html">Lucknow, Uttar Pradesh</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span id="current-year"></span> StudyConnectIndia. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="/js/data.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/tutors.js"></script>
-</body>
-</html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Tutor | StudyConnectIndia</title>
+  <meta name="description" content="Find trusted home tutors through StudyConnectIndia and request a qualified local tutor for your child today.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://studyconnectindia.com/pages/find-tutor.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body data-page="find-tutor">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/index.html">
+        <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+        <span class="brand-name">
+          <span class="brand-title">StudyConnectIndia</span>
+          <span class="brand-tagline">Learn locally. Grow confidently.</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/index.html" data-nav="home">Home</a>
+        <a href="/pages/find-tutor.html" data-nav="find-tutor">Find Tutor</a>
+        <a href="/pages/become-tutor.html" data-nav="become-tutor">Become a Tutor</a>
+        <a href="/pages/about.html" data-nav="about">About</a>
+        <a href="/pages/contact.html" data-nav="contact">Contact</a>
+        <a class="btn btn-sm btn-primary" href="/pages/request-tutor.html">Request Tutor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Tutor Discovery</span>
+        <h1>Browse home tutors by class, subject, area, and budget.</h1>
+        <p>Use the filters below to shortlist tutors for offline tuition in your area through StudyConnectIndia.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container search-layout">
+        <aside class="card filter-panel">
+          <h2>Search Filters</h2>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="filter-class">Class</label>
+              <select id="filter-class">
+                <option value="">All classes</option>
+                <option value="class 4">Class 4-7</option>
+                <option value="class 5">Class 5-8</option>
+                <option value="class 6">Class 6-10</option>
+                <option value="class 8">Class 8-12</option>
+                <option value="class 9">Class 9-12</option>
+                <option value="class 10">Class 10-12</option>
+                <option value="class 11">Class 11-12</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="filter-subject">Subject</label>
+              <select id="filter-subject">
+                <option value="">All subjects</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="English">English</option>
+                <option value="Social Science">Social Science</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Commerce">Commerce</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="filter-location">Location</label>
+              <select id="filter-location">
+                <option value="">All locations</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Ayodhya">Ayodhya</option>
+                <option value="Basti">Basti</option>
+                <option value="Gomti Nagar">Gomti Nagar</option>
+                <option value="Aliganj">Aliganj</option>
+                <option value="Indira Nagar">Indira Nagar</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="filter-budget">Maximum Budget (per month)</label>
+              <select id="filter-budget">
+                <option value="">Any budget</option>
+                <option value="700">Up to ₹700</option>
+                <option value="850">Up to ₹850</option>
+                <option value="1000">Up to ₹1,000</option>
+                <option value="1200">Up to ₹1,200</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-actions">
+            <button id="reset-filters" class="btn btn-secondary" type="button">Reset Filters</button>
+          </div>
+        </aside>
+
+        <section class="card results-panel">
+          <div class="section-heading align-left">
+            <span class="eyebrow">Available Tutors</span>
+            <h2>Local tutor matches</h2>
+            <p>Profiles are loaded dynamically from the sample data file.</p>
+          </div>
+          <div id="tutor-list" class="grid two-column"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="/index.html">
+          <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+          <span class="brand-name">
+            <span class="brand-title">StudyConnectIndia</span>
+            <span class="brand-tagline">Learn locally. Grow confidently.</span>
+          </span>
+        </a>
+        <p>Helping families connect with trusted offline home tutors across Uttar Pradesh through the StudyConnectIndia network.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="/pages/find-tutor.html">Find Tutor</a>
+        <a href="/pages/request-tutor.html">Request Tutor</a>
+        <a href="/pages/become-tutor.html">Become a Tutor</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+919999999999">+91 99999 99999</a>
+        <a href="mailto:hello@studyconnectindia.in">hello@studyconnectindia.in</a>
+        <a href="/pages/contact.html">Lucknow, Uttar Pradesh</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> StudyConnectIndia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/data.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/tutors.js"></script>
+</body>
+</html>
+

@@ -1,316 +1,319 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Become a Tutor | StudyConnectIndia</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-  <style>
-    .form-intro {
-      margin-bottom: 1.25rem;
-      color: var(--muted);
-    }
-
-    .form-submit-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .form-note {
-      color: #5a6883;
-      font-size: 0.98rem;
-    }
-
-    .tutor-submit {
-      min-width: 220px;
-      justify-content: center;
-      position: relative;
-    }
-
-    .tutor-submit.is-loading {
-      pointer-events: none;
-      opacity: 0.9;
-    }
-
-    .tutor-submit.is-loading::after {
-      content: "";
-      width: 16px;
-      height: 16px;
-      margin-left: 0.65rem;
-      border: 2px solid rgba(255, 255, 255, 0.45);
-      border-top-color: #ffffff;
-      border-radius: 50%;
-      animation: tutor-button-spin 0.8s linear infinite;
-    }
-
-    @keyframes tutor-button-spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    @media (max-width: 560px) {
-      .form-note {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
-</head>
-<body data-page="become-tutor">
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="/index.html">
-        <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
-        <span class="brand-name">
-          <span class="brand-title">StudyConnectIndia</span>
-          <span class="brand-tagline">Learn locally. Grow confidently.</span>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav">
-        <a href="/index.html" data-nav="home">Home</a>
-        <a href="/pages/find-tutor.html" data-nav="find-tutor">Find Tutor</a>
-        <a href="/pages/become-tutor.html" data-nav="become-tutor">Become a Tutor</a>
-        <a href="/pages/about.html" data-nav="about">About</a>
-        <a href="/pages/contact.html" data-nav="contact">Contact</a>
-        <a class="btn btn-sm btn-primary" href="/pages/request-tutor.html">Request Tutor</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">Tutor Registration</span>
-        <h1>Create your tutor profile and join the StudyConnectIndia network.</h1>
-        <p>Share your teaching details in one step and we will review your profile for suitable student matches.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="card form-card">
-          <p class="form-intro">Complete the details below so families can be matched with your subject expertise, preferred area, teaching mode, and experience.</p>
-          <form
-            id="become-tutor-form"
-            action="https://formsubmit.co/hmishra2227@gmail.com"
-            method="POST"
-            novalidate
-          >
-            <input type="hidden" name="_subject" value="New Tutor Registration">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://studyconnectindia.com/pages/tutor-registration-thank-you.html">
-
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="tutor-full-name">Full Name</label>
-                <input id="tutor-full-name" name="Full Name" type="text" placeholder="Enter your full name" required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-phone">Phone Number</label>
-                <input id="tutor-phone" name="Phone Number" type="tel" placeholder="10-digit mobile number" required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-email">Email Address</label>
-                <input id="tutor-email" name="Email Address" type="email" placeholder="Enter your email address" required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-gender">Gender</label>
-                <select id="tutor-gender" name="Gender" required>
-                  <option value="">Select gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
-                  <option>Prefer not to say</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="tutor-qualification">Qualification</label>
-                <input id="tutor-qualification" name="Qualification" type="text" placeholder="B.Sc, M.A, B.Ed, etc." required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-subjects">Subjects You Teach</label>
-                <input id="tutor-subjects" name="Subjects You Teach" type="text" placeholder="Math, Science, English" required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-class-range">Class Range</label>
-                <input id="tutor-class-range" name="Class Range" type="text" placeholder="Class 1-5, Class 9-12, etc." required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-experience">Experience</label>
-                <select id="tutor-experience" name="Experience" required>
-                  <option value="">Select experience</option>
-                  <option>Fresher</option>
-                  <option>1-2 years</option>
-                  <option>3-5 years</option>
-                  <option>5+ years</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="tutor-area">Preferred Area</label>
-                <input id="tutor-area" name="Preferred Area" type="text" placeholder="Gomti Nagar, Aliganj, Basti" required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-mode">Teaching Mode</label>
-                <select id="tutor-mode" name="Teaching Mode" required>
-                  <option value="">Select teaching mode</option>
-                  <option>Home Tuition</option>
-                  <option>Online</option>
-                  <option>Both</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="tutor-timing">Available Timing</label>
-                <input id="tutor-timing" name="Available Timing" type="text" placeholder="Morning, Evening, Weekend" required>
-              </div>
-              <div class="form-group">
-                <label for="tutor-fees">Expected Fees</label>
-                <input id="tutor-fees" name="Expected Fees" type="text" placeholder="Rs 2,000 per month or hourly fee" required>
-              </div>
-              <div class="form-group full-width">
-                <label for="tutor-message">Short Message / About Yourself</label>
-                <textarea id="tutor-message" name="Short Message / About Yourself" rows="6" placeholder="Tell us about your teaching style, strengths, and preferred students" required></textarea>
-              </div>
-            </div>
-
-            <div class="button-row form-submit-row">
-              <button class="btn btn-primary tutor-submit" type="submit">
-                <span class="submit-label">Submit Tutor Profile</span>
-              </button>
-              <span class="form-note">Your profile details are reviewed privately and used only for tutor registration and matching.</span>
-            </div>
-          </form>
-          <div class="success-message hidden"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand brand-footer" href="/index.html">
-          <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
-          <span class="brand-name">
-            <span class="brand-title">StudyConnectIndia</span>
-            <span class="brand-tagline">Learn locally. Grow confidently.</span>
-          </span>
-        </a>
-        <p>Helping families connect with trusted offline home tutors in Uttar Pradesh.</p>
-      </div>
-      <div>
-        <h3>Quick Links</h3>
-        <a href="/pages/find-tutor.html">Find Tutor</a>
-        <a href="/pages/request-tutor.html">Request Tutor</a>
-        <a href="/pages/become-tutor.html">Become a Tutor</a>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="tel:+916306547226">+91 63065 47226</a>
-        <a href="mailto:hmishra2227@gmail.com">hmishra2227@gmail.com</a>
-        <a href="/pages/contact.html">Lucknow, Uttar Pradesh</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; <span id="current-year"></span> StudyConnectIndia. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
-  <script>
-    (function () {
-      const form = document.getElementById("become-tutor-form");
-      const submitButton = form ? form.querySelector(".tutor-submit") : null;
-      const submitLabel = submitButton ? submitButton.querySelector(".submit-label") : null;
-      const emailField = form ? form.querySelector("#tutor-email") : null;
-      const phoneField = form ? form.querySelector("#tutor-phone") : null;
-
-      if (!form || !submitButton || !submitLabel || !emailField || !phoneField) {
-        return;
-      }
-
-      const setLoadingState = function (isLoading) {
-        submitButton.classList.toggle("is-loading", isLoading);
-        submitButton.disabled = isLoading;
-        submitLabel.textContent = isLoading ? "Sending..." : "Submit Tutor Profile";
-      };
-
-      const clearErrors = function () {
-        form.querySelectorAll(".input-error").forEach(function (field) {
-          field.classList.remove("input-error");
-        });
-
-        form.querySelectorAll(".error-text").forEach(function (error) {
-          error.remove();
-        });
-      };
-
-      const showError = function (field, message) {
-        field.classList.add("input-error");
-        const error = document.createElement("span");
-        error.className = "error-text";
-        error.textContent = message;
-        field.insertAdjacentElement("afterend", error);
-      };
-
-      form.addEventListener("submit", function (event) {
-        clearErrors();
-
-        const requiredFields = [
-          { selector: "#tutor-full-name", message: "Please enter your full name." },
-          { selector: "#tutor-gender", message: "Please select your gender." },
-          { selector: "#tutor-qualification", message: "Please enter your qualification." },
-          { selector: "#tutor-subjects", message: "Please enter the subjects you teach." },
-          { selector: "#tutor-class-range", message: "Please enter your class range." },
-          { selector: "#tutor-experience", message: "Please select your experience." },
-          { selector: "#tutor-area", message: "Please enter your preferred area." },
-          { selector: "#tutor-mode", message: "Please select your teaching mode." },
-          { selector: "#tutor-timing", message: "Please enter your available timing." },
-          { selector: "#tutor-fees", message: "Please enter your expected fees." },
-          { selector: "#tutor-message", message: "Please add a short message about yourself." }
-        ];
-
-        let formIsValid = true;
-
-        requiredFields.forEach(function (item) {
-          const field = form.querySelector(item.selector);
-          if (!field || field.value.trim()) {
-            return;
-          }
-
-          formIsValid = false;
-          showError(field, item.message);
-        });
-
-        if (!/^[6-9]\d{9}$/.test(phoneField.value.trim())) {
-          formIsValid = false;
-          showError(phoneField, "Please enter a valid 10-digit phone number.");
-        }
-
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
-          formIsValid = false;
-          showError(emailField, "Please enter a valid email address.");
-        }
-
-        if (!formIsValid) {
-          event.preventDefault();
-          return;
-        }
-
-        setLoadingState(true);
-      });
-    }());
-  </script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Tutor | StudyConnectIndia</title>
+  <meta name="description" content="Join StudyConnectIndia as a tutor and start connecting with local students who need home tuition support.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://studyconnectindia.com/pages/become-tutor.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <style>
+    .form-intro {
+      margin-bottom: 1.25rem;
+      color: var(--muted);
+    }
+
+    .form-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .form-note {
+      color: #5a6883;
+      font-size: 0.98rem;
+    }
+
+    .tutor-submit {
+      min-width: 220px;
+      justify-content: center;
+      position: relative;
+    }
+
+    .tutor-submit.is-loading {
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    .tutor-submit.is-loading::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      margin-left: 0.65rem;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: tutor-button-spin 0.8s linear infinite;
+    }
+
+    @keyframes tutor-button-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .form-note {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body data-page="become-tutor">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/index.html">
+        <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+        <span class="brand-name">
+          <span class="brand-title">StudyConnectIndia</span>
+          <span class="brand-tagline">Learn locally. Grow confidently.</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/index.html" data-nav="home">Home</a>
+        <a href="/pages/find-tutor.html" data-nav="find-tutor">Find Tutor</a>
+        <a href="/pages/become-tutor.html" data-nav="become-tutor">Become a Tutor</a>
+        <a href="/pages/about.html" data-nav="about">About</a>
+        <a href="/pages/contact.html" data-nav="contact">Contact</a>
+        <a class="btn btn-sm btn-primary" href="/pages/request-tutor.html">Request Tutor</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Tutor Registration</span>
+        <h1>Create your tutor profile and join the StudyConnectIndia network.</h1>
+        <p>Share your teaching details in one step and we will review your profile for suitable student matches.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card form-card">
+          <p class="form-intro">Complete the details below so families can be matched with your subject expertise, preferred area, teaching mode, and experience.</p>
+          <form
+            id="become-tutor-form"
+            action="https://formsubmit.co/hmishra2227@gmail.com"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="_subject" value="New Tutor Registration">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://studyconnectindia.com/pages/tutor-registration-thank-you.html">
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="tutor-full-name">Full Name</label>
+                <input id="tutor-full-name" name="Full Name" type="text" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-phone">Phone Number</label>
+                <input id="tutor-phone" name="Phone Number" type="tel" placeholder="10-digit mobile number" required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-email">Email Address</label>
+                <input id="tutor-email" name="Email Address" type="email" placeholder="Enter your email address" required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-gender">Gender</label>
+                <select id="tutor-gender" name="Gender" required>
+                  <option value="">Select gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tutor-qualification">Qualification</label>
+                <input id="tutor-qualification" name="Qualification" type="text" placeholder="B.Sc, M.A, B.Ed, etc." required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-subjects">Subjects You Teach</label>
+                <input id="tutor-subjects" name="Subjects You Teach" type="text" placeholder="Math, Science, English" required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-class-range">Class Range</label>
+                <input id="tutor-class-range" name="Class Range" type="text" placeholder="Class 1-5, Class 9-12, etc." required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-experience">Experience</label>
+                <select id="tutor-experience" name="Experience" required>
+                  <option value="">Select experience</option>
+                  <option>Fresher</option>
+                  <option>1-2 years</option>
+                  <option>3-5 years</option>
+                  <option>5+ years</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tutor-area">Preferred Area</label>
+                <input id="tutor-area" name="Preferred Area" type="text" placeholder="Gomti Nagar, Aliganj, Basti" required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-mode">Teaching Mode</label>
+                <select id="tutor-mode" name="Teaching Mode" required>
+                  <option value="">Select teaching mode</option>
+                  <option>Home Tuition</option>
+                  <option>Online</option>
+                  <option>Both</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tutor-timing">Available Timing</label>
+                <input id="tutor-timing" name="Available Timing" type="text" placeholder="Morning, Evening, Weekend" required>
+              </div>
+              <div class="form-group">
+                <label for="tutor-fees">Expected Fees</label>
+                <input id="tutor-fees" name="Expected Fees" type="text" placeholder="Rs 2,000 per month or hourly fee" required>
+              </div>
+              <div class="form-group full-width">
+                <label for="tutor-message">Short Message / About Yourself</label>
+                <textarea id="tutor-message" name="Short Message / About Yourself" rows="6" placeholder="Tell us about your teaching style, strengths, and preferred students" required></textarea>
+              </div>
+            </div>
+
+            <div class="button-row form-submit-row">
+              <button class="btn btn-primary tutor-submit" type="submit">
+                <span class="submit-label">Submit Tutor Profile</span>
+              </button>
+              <span class="form-note">Your profile details are reviewed privately and used only for tutor registration and matching.</span>
+            </div>
+          </form>
+          <div class="success-message hidden"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="/index.html">
+          <img class="brand-mark" src="/assets/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+          <span class="brand-name">
+            <span class="brand-title">StudyConnectIndia</span>
+            <span class="brand-tagline">Learn locally. Grow confidently.</span>
+          </span>
+        </a>
+        <p>Helping families connect with trusted offline home tutors in Uttar Pradesh.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="/pages/find-tutor.html">Find Tutor</a>
+        <a href="/pages/request-tutor.html">Request Tutor</a>
+        <a href="/pages/become-tutor.html">Become a Tutor</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+916306547226">+91 63065 47226</a>
+        <a href="mailto:hmishra2227@gmail.com">hmishra2227@gmail.com</a>
+        <a href="/pages/contact.html">Lucknow, Uttar Pradesh</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> StudyConnectIndia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    (function () {
+      const form = document.getElementById("become-tutor-form");
+      const submitButton = form ? form.querySelector(".tutor-submit") : null;
+      const submitLabel = submitButton ? submitButton.querySelector(".submit-label") : null;
+      const emailField = form ? form.querySelector("#tutor-email") : null;
+      const phoneField = form ? form.querySelector("#tutor-phone") : null;
+
+      if (!form || !submitButton || !submitLabel || !emailField || !phoneField) {
+        return;
+      }
+
+      const setLoadingState = function (isLoading) {
+        submitButton.classList.toggle("is-loading", isLoading);
+        submitButton.disabled = isLoading;
+        submitLabel.textContent = isLoading ? "Sending..." : "Submit Tutor Profile";
+      };
+
+      const clearErrors = function () {
+        form.querySelectorAll(".input-error").forEach(function (field) {
+          field.classList.remove("input-error");
+        });
+
+        form.querySelectorAll(".error-text").forEach(function (error) {
+          error.remove();
+        });
+      };
+
+      const showError = function (field, message) {
+        field.classList.add("input-error");
+        const error = document.createElement("span");
+        error.className = "error-text";
+        error.textContent = message;
+        field.insertAdjacentElement("afterend", error);
+      };
+
+      form.addEventListener("submit", function (event) {
+        clearErrors();
+
+        const requiredFields = [
+          { selector: "#tutor-full-name", message: "Please enter your full name." },
+          { selector: "#tutor-gender", message: "Please select your gender." },
+          { selector: "#tutor-qualification", message: "Please enter your qualification." },
+          { selector: "#tutor-subjects", message: "Please enter the subjects you teach." },
+          { selector: "#tutor-class-range", message: "Please enter your class range." },
+          { selector: "#tutor-experience", message: "Please select your experience." },
+          { selector: "#tutor-area", message: "Please enter your preferred area." },
+          { selector: "#tutor-mode", message: "Please select your teaching mode." },
+          { selector: "#tutor-timing", message: "Please enter your available timing." },
+          { selector: "#tutor-fees", message: "Please enter your expected fees." },
+          { selector: "#tutor-message", message: "Please add a short message about yourself." }
+        ];
+
+        let formIsValid = true;
+
+        requiredFields.forEach(function (item) {
+          const field = form.querySelector(item.selector);
+          if (!field || field.value.trim()) {
+            return;
+          }
+
+          formIsValid = false;
+          showError(field, item.message);
+        });
+
+        if (!/^[6-9]\d{9}$/.test(phoneField.value.trim())) {
+          formIsValid = false;
+          showError(phoneField, "Please enter a valid 10-digit phone number.");
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+          formIsValid = false;
+          showError(emailField, "Please enter a valid email address.");
+        }
+
+        if (!formIsValid) {
+          event.preventDefault();
+          return;
+        }
+
+        setLoadingState(true);
+      });
+    }());
+  </script>
+</body>
+</html>
