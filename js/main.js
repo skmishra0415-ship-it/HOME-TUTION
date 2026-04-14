@@ -9,13 +9,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".site-nav");
 
   if (toggleButton && nav) {
+    const closeNav = () => {
+      nav.classList.remove("open");
+      toggleButton.setAttribute("aria-expanded", "false");
+    };
+
     toggleButton.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("open");
       toggleButton.setAttribute("aria-expanded", String(isOpen));
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => nav.classList.remove("open"));
+      link.addEventListener("click", closeNav);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!nav.classList.contains("open")) {
+        return;
+      }
+
+      if (nav.contains(event.target) || toggleButton.contains(event.target)) {
+        return;
+      }
+
+      closeNav();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeNav();
+      }
     });
   }
 
