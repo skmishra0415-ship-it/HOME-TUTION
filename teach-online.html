@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teach Online | StudyConnectIndia</title>
+  <meta name="description" content="Register as an online teacher with StudyConnectIndia through a professional, mobile-friendly form.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/online-pages.css">
+</head>
+<body data-page="teach-online">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/index.html">
+        <img class="brand-mark" src="/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+        <span class="brand-name">
+          <span class="brand-title">StudyConnectIndia</span>
+          <span class="brand-tagline">Learn locally. Grow confidently.</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/index.html">Home</a>
+        <a href="/learn-online.html">Learn Online</a>
+        <a href="/teach-online.html" data-nav="teach-online">Teach Online</a>
+        <a href="/join-class.html">Join Class</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn btn-sm btn-primary" href="/join-class.html">Live Class</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="online-hero">
+      <div class="container online-hero-grid">
+        <div class="online-hero-copy">
+          <span class="eyebrow">Teacher Registration</span>
+          <h1>Apply to teach online and grow your tutoring profile professionally.</h1>
+          <p>This teacher registration page is designed for educators who want to share their teaching details clearly and professionally using a clean, mobile-friendly layout.</p>
+          <ul class="hero-points">
+            <li>Professional online teacher application form</li>
+            <li>Direct FormSubmit integration to your Gmail inbox</li>
+            <li>Simple static setup with no backend or database</li>
+          </ul>
+          <p class="hero-note">Submit your profile and we will review your details.</p>
+        </div>
+
+        <aside class="online-highlight-card">
+          <span class="eyebrow">Built For Tutors</span>
+          <h2 class="support-card-title">A polished form that feels ready for real use.</h2>
+          <p class="support-text">Teachers can share experience, subjects, class levels, and availability in a structured format that looks trustworthy on both phones and desktops.</p>
+          <div class="highlight-stats">
+            <div class="highlight-stat">
+              <strong>Professional Presentation</strong>
+              <span>Useful for first-time applicants and experienced tutors alike.</span>
+            </div>
+            <div class="highlight-stat">
+              <strong>Fast Review Flow</strong>
+              <span>Every submission goes directly to hmishra2227@gmail.com.</span>
+            </div>
+            <div class="highlight-stat">
+              <strong>Beginner-Friendly Setup</strong>
+              <span>No backend, dashboard, or admin system is required to start.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="online-section">
+      <div class="container online-form-layout">
+        <aside class="card form-support-card">
+          <span class="eyebrow">What To Include</span>
+          <h2 class="support-card-title">Helpful registration tips</h2>
+          <div class="support-box">
+            <strong>Subjects and levels</strong>
+            <span class="support-text">Clearly mention the subjects and class ranges you can handle confidently.</span>
+          </div>
+          <div class="support-box">
+            <strong>Experience and timing</strong>
+            <span class="support-text">Share your teaching background and the times you are available for live online sessions.</span>
+          </div>
+          <div class="support-box">
+            <strong>Short bio</strong>
+            <span class="support-text">A small bio helps explain your teaching style and strengths.</span>
+          </div>
+        </aside>
+
+        <section class="form-card">
+          <span class="eyebrow">Teacher Form</span>
+          <h2 class="form-card-title">Register to teach online</h2>
+          <p class="section-intro">Complete the form below with accurate details so your profile can be reviewed properly.</p>
+
+          <!-- Replace the email below if you want FormSubmit to send enquiries to a different Gmail address. -->
+          <form class="online-form" action="https://formsubmit.co/hmishra2227@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Teacher Registration">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" value="https://studyconnectindia.com/thank-you.html">
+
+            <div class="online-form-grid">
+              <div class="online-field">
+                <label for="teacher-full-name">Full Name</label>
+                <input id="teacher-full-name" name="Full Name" type="text" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="online-field">
+                <label for="teacher-mobile-number">Mobile Number</label>
+                <input id="teacher-mobile-number" name="Mobile Number" type="tel" placeholder="Enter mobile number" pattern="[0-9+\s-]{10,15}" required>
+              </div>
+
+              <div class="online-field">
+                <label for="teacher-email-address">Email Address</label>
+                <input id="teacher-email-address" name="Email Address" type="email" placeholder="Enter email address" required>
+              </div>
+
+              <div class="online-field">
+                <label for="teacher-subjects">Subjects You Teach</label>
+                <input id="teacher-subjects" name="Subjects You Teach" type="text" placeholder="Example: Maths, Physics, English" required>
+              </div>
+
+              <div class="online-field">
+                <label for="teacher-levels">Classes / Levels You Teach</label>
+                <input id="teacher-levels" name="Classes / Levels You Teach" type="text" placeholder="Example: Class 6 to 10, Board Exam Prep" required>
+              </div>
+
+              <div class="online-field">
+                <label for="teaching-experience">Teaching Experience</label>
+                <input id="teaching-experience" name="Teaching Experience" type="text" placeholder="Example: 4 years" required>
+              </div>
+
+              <div class="online-field">
+                <label for="teacher-available-time">Available Time</label>
+                <input id="teacher-available-time" name="Available Time" type="text" placeholder="Example: Weekdays 5 PM to 8 PM" required>
+              </div>
+
+              <div class="online-field full-width">
+                <label for="teacher-short-bio">Short Bio</label>
+                <textarea id="teacher-short-bio" name="Short Bio" placeholder="Write a short introduction about your teaching style, academic background, and strengths." required></textarea>
+              </div>
+            </div>
+
+            <p class="subtle-note">Submit your profile and we will review your details.</p>
+
+            <div class="submit-strip">
+              <button class="btn btn-primary" type="submit">Submit Teacher Registration</button>
+              <span class="submit-note">This registration goes directly to your Gmail through FormSubmit.</span>
+            </div>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="/index.html">
+          <img class="brand-mark" src="/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+          <span class="brand-name">
+            <span class="brand-title">StudyConnectIndia</span>
+            <span class="brand-tagline">Learn locally. Grow confidently.</span>
+          </span>
+        </a>
+        <p>Helping tutors present their teaching profile professionally for online learning opportunities.</p>
+      </div>
+      <div>
+        <h3>Online Pages</h3>
+        <a href="/learn-online.html">Learn Online</a>
+        <a href="/teach-online.html">Teach Online</a>
+        <a href="/join-class.html">Join Live Class</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+916306547226">+91 63065 47226</a>
+        <a href="mailto:hmishra2227@gmail.com">hmishra2227@gmail.com</a>
+        <a href="/thank-you.html">Thank You Page</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> StudyConnectIndia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

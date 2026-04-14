@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Live Class | StudyConnectIndia</title>
+  <meta name="description" content="Start or join live online classes on StudyConnectIndia using embedded Jitsi Meet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/online-pages.css">
+</head>
+<body data-page="join-class">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/index.html">
+        <img class="brand-mark" src="/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+        <span class="brand-name">
+          <span class="brand-title">StudyConnectIndia</span>
+          <span class="brand-tagline">Learn locally. Grow confidently.</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/index.html">Home</a>
+        <a href="/learn-online.html">Learn Online</a>
+        <a href="/teach-online.html">Teach Online</a>
+        <a href="/join-class.html" data-nav="join-class">Join Class</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn btn-sm btn-primary" href="/join-class.html">Live Class</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="live-class-access" class="online-section">
+      <div class="container success-layout">
+        <section class="success-card">
+          <div class="success-badge">PIN</div>
+          <span class="eyebrow">Protected Access</span>
+          <h1>Enter the live class PIN</h1>
+          <p>Only users who have your class PIN can open this page.</p>
+          <div class="online-form" style="max-width: 440px; margin: 1.5rem auto 0;">
+            <div class="online-field">
+              <label for="live-class-pin">Live Class PIN</label>
+              <input id="live-class-pin" type="password" placeholder="Enter the access PIN you received">
+            </div>
+            <div class="submit-strip" style="justify-content: center;">
+              <button type="button" id="unlock-live-class-btn" class="btn btn-primary">Open Live Class</button>
+            </div>
+            <p id="live-class-pin-message" class="subtle-note">Teacher and student both need the correct PIN to continue.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <div id="live-class-content" class="hidden">
+    <section class="online-hero">
+      <div class="container online-hero-grid">
+        <div class="online-hero-copy">
+          <span class="eyebrow">Live Online Class</span>
+          <h1>Start or join a live class directly from your website.</h1>
+          <p>This page uses embedded Jitsi Meet so teachers and students can launch a live class in-browser without a backend, database, React, or Node setup.</p>
+          <ul class="hero-points">
+            <li>Teachers can generate a room code automatically</li>
+            <li>Students can join using a shared room code and password</li>
+            <li>Everything works inside one clean mobile-friendly page</li>
+          </ul>
+          <p class="hero-note">Teacher should join first and share room code/password manually.</p>
+        </div>
+
+        <aside class="online-highlight-card">
+          <span class="eyebrow">How It Works</span>
+          <h2 class="support-card-title">Simple no-backend live class starter</h2>
+          <div class="highlight-stats">
+            <div class="highlight-stat">
+              <strong>Start Class</strong>
+              <span>Create a room from teacher details and launch the embedded meeting.</span>
+            </div>
+            <div class="highlight-stat">
+              <strong>Join Class</strong>
+              <span>Students enter a room code and optional password to join the live session.</span>
+            </div>
+            <div class="highlight-stat">
+              <strong>Reusable JavaScript</strong>
+              <span>The page uses small plain JavaScript functions for room management and meeting control.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="online-section">
+      <div class="container join-layout">
+        <section class="join-panel">
+          <div class="panel-header">
+            <span class="eyebrow">Class Controls</span>
+            <h2>Start or join a meeting</h2>
+            <p class="panel-copy">Use the tabs below depending on whether you are the teacher starting the class or a student joining it.</p>
+          </div>
+
+          <div class="tab-switcher" role="tablist" aria-label="Live class tabs">
+            <button type="button" id="start-class-tab" data-tab-button="start" class="is-active" role="tab" aria-selected="true">Start Class</button>
+            <button type="button" data-tab-button="join" role="tab" aria-selected="false">Join Class</button>
+          </div>
+
+          <p id="teacher-access-note" class="subtle-note">Teacher start controls are available only through your private teacher link.</p>
+
+          <section data-tab-panel="start" class="tab-content">
+            <div class="online-form-grid">
+              <div class="online-field">
+                <label for="teacher-name">Teacher Name</label>
+                <input id="teacher-name" type="text" placeholder="Enter teacher name">
+              </div>
+
+              <div class="online-field">
+                <label for="teacher-subject">Subject</label>
+                <input id="teacher-subject" type="text" placeholder="Example: Maths">
+              </div>
+
+              <div class="online-field full-width">
+                <label for="class-title">Class Title</label>
+                <input id="class-title" type="text" placeholder="Example: Algebra Revision Session">
+              </div>
+
+              <div class="online-field full-width">
+                <label for="manual-room-code">Room Code You Want To Use</label>
+                <input id="manual-room-code" type="text" placeholder="Optional manual room code controlled by you">
+              </div>
+
+              <div class="online-field full-width">
+                <label for="room-password">Room Password You Control</label>
+                <input id="room-password" type="text" placeholder="Set the password yourself before sharing with students">
+              </div>
+            </div>
+
+            <div class="room-code-box">
+              <strong>Generated Room Code</strong>
+              <span id="generated-room-code" class="room-code-value">Room code will appear here after generation.</span>
+            </div>
+
+            <div class="room-code-box">
+              <strong>Join Link To Share</strong>
+              <span id="shareable-join-link" class="room-code-value">Join link will appear here after room code generation.</span>
+            </div>
+
+            <div class="submit-strip">
+              <button type="button" id="start-class-btn" class="btn btn-primary">Start Teacher Class</button>
+              <button type="button" id="copy-room-code-btn" class="btn btn-secondary">Copy Room Code</button>
+              <button type="button" id="copy-invite-btn" class="btn btn-secondary">Copy Invite Details</button>
+              <span class="submit-note">You can either use your own room code or let the page generate one from the teacher and class details.</span>
+            </div>
+          </section>
+
+          <section data-tab-panel="join" class="tab-content" hidden>
+            <div class="online-form-grid">
+              <div class="online-field">
+                <label for="student-name">Student Name</label>
+                <input id="student-name" type="text" placeholder="Enter student name">
+              </div>
+
+              <div class="online-field">
+                <label for="room-code">Room Code</label>
+                <input id="room-code" type="text" placeholder="Enter room code shared by teacher">
+              </div>
+
+              <div class="online-field full-width">
+                <label for="join-password">Password</label>
+                <input id="join-password" type="text" placeholder="Enter password if the room is protected">
+              </div>
+            </div>
+
+            <div class="submit-strip">
+              <button type="button" id="join-class-btn" class="btn btn-primary">Join Student Class</button>
+              <span class="submit-note">Use the exact room code shared by the teacher.</span>
+            </div>
+          </section>
+
+          <div id="meeting-message" class="message-box is-info">Choose Start Class or Join Class to begin.</div>
+
+          <div class="limitations-box">
+            <h3>Current Limitations</h3>
+            <ul class="limitations-list">
+              <li>This is a no-backend starter setup.</li>
+              <li>Room approval is manual.</li>
+              <li>Room code and password are controlled and shared manually by you.</li>
+              <li>No secure login system is included yet.</li>
+              <li>A backend can be added later when leads grow.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="meeting-panel">
+          <span class="eyebrow">Embedded Meeting</span>
+          <h2>Live class area</h2>
+          <p class="section-intro">The Jitsi meeting opens inside this section. If a previous class is active, it will be replaced before a new one is started.</p>
+
+          <div class="meeting-stage">
+            <div id="jitsi-container" class="meeting-placeholder">
+              <div>
+                <h3>Meeting preview area</h3>
+                <p>The live class will load here after a teacher starts the room or a student joins using a valid room code.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="meeting-controls">
+            <span class="inline-note">Meeting height is optimized for both desktop and mobile browsing.</span>
+            <button type="button" id="end-meeting-btn" class="btn btn-secondary">Close Current Meeting</button>
+          </div>
+        </section>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="/index.html">
+          <img class="brand-mark" src="/images/studyconnectindia-logo.svg" alt="StudyConnectIndia logo">
+          <span class="brand-name">
+            <span class="brand-title">StudyConnectIndia</span>
+            <span class="brand-tagline">Learn locally. Grow confidently.</span>
+          </span>
+        </a>
+        <p>A simple live class starter page using plain HTML, CSS, JavaScript, and embedded Jitsi Meet.</p>
+      </div>
+      <div>
+        <h3>Online Pages</h3>
+        <a href="/learn-online.html">Learn Online</a>
+        <a href="/teach-online.html">Teach Online</a>
+        <a href="/join-class.html">Join Live Class</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="tel:+916306547226">+91 63065 47226</a>
+        <a href="mailto:hmishra2227@gmail.com">hmishra2227@gmail.com</a>
+        <a href="/thank-you.html">Thank You Page</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> StudyConnectIndia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="https://meet.jit.si/external_api.js"></script>
+  <script src="/js/join-class.js"></script>
+</body>
+</html>

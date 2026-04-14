@@ -20,11 +20,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <style>
-    .enquiry-section {
-      background:
-        radial-gradient(circle at top left, rgba(36, 87, 255, 0.18), transparent 34%),
-        linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+  <style>
+    .quick-path-strip {
+      background: rgba(15, 93, 122, 0.04);
+      border-bottom: 1px solid rgba(215, 229, 235, 0.9);
+    }
+
+    .quick-paths {
+      display: flex;
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding: 0.85rem 0;
+      scrollbar-width: thin;
+    }
+
+    .quick-paths a {
+      flex: 0 0 auto;
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #d7e5eb;
+      background: #ffffff;
+      color: #16315f;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 10px 24px rgba(15, 93, 122, 0.06);
+    }
+
+    .quick-paths a:hover {
+      color: #0f5d7a;
+      transform: translateY(-1px);
+    }
+
+    .briefing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .briefing-card {
+      padding: 1.25rem;
+      border-radius: 20px;
+      border: 1px solid #d7e5eb;
+      background: #ffffff;
+      box-shadow: 0 16px 36px rgba(15, 93, 122, 0.08);
+    }
+
+    .briefing-card strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: #0f5d7a;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+    }
+
+    .briefing-card p {
+      margin: 0;
+      color: #5a6883;
+    }
+
+    .enquiry-section {
+      background:
+        radial-gradient(circle at top left, rgba(36, 87, 255, 0.18), transparent 34%),
+        linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
     }
 
     .enquiry-layout {
@@ -321,14 +379,18 @@
       }
     }
 
-    @media (max-width: 640px) {
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .enquiry-info,
-      .enquiry-form-card {
-        padding: 1.4rem;
+    @media (max-width: 640px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .briefing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .enquiry-info,
+      .enquiry-form-card {
+        padding: 1.4rem;
       }
 
       .submit-row {
@@ -357,28 +419,61 @@
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav">
-        <a href="/index.html" data-nav="home">Home</a>
+      <nav class="site-nav">
+        <a href="/index.html" data-nav="home">Home</a>
         <a href="/find-tutor.html" data-nav="find-tutor">Find Tutor</a>
         <a href="/tutor.html" data-nav="tutor">Become a Tutor</a>
+        <a href="/learn-online.html">Learn Online</a>
+        <a href="/teach-online.html">Teach Online</a>
+        <a href="/join-class.html">Join Class</a>
         <a href="/about.html" data-nav="about">About</a>
         <a href="/contact.html" data-nav="contact">Contact</a>
         <a class="btn btn-sm btn-primary" href="/student.html">Request Tutor</a>
-      </nav>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <section class="quick-path-strip">
+    <div class="container quick-paths" aria-label="Quick website paths">
+      <a href="/index.html">Home</a>
+      <a href="/find-tutor.html">Student Offline</a>
+      <a href="/learn-online.html">Student Online</a>
+      <a href="/tutor.html">Tutor Offline</a>
+      <a href="/teach-online.html">Tutor Online</a>
+      <a href="/join-class.html">Live Class</a>
+    </div>
+  </section>
+
+  <main>
     <section class="hero-section">
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">StudyConnectIndia for School Students</span>
           <h1>Reliable home tutors for every class, subject, and learning need.</h1>
-          <p>Connect with verified tutors across Lucknow, Ayodhya, Basti, Gomti Nagar, Aliganj, and Indira Nagar for personalized at-home learning.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/find-tutor.html">Find a Tutor</a>
-            <a class="btn btn-secondary" href="/tutor.html">Join as Tutor</a>
-          </div>
+          <p>Find offline tutors, request online classes, join as a tutor, or run live classes from one simple tutoring platform.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/find-tutor.html">I Need a Tutor</a>
+            <a class="btn btn-secondary" href="/tutor.html">I Want to Teach</a>
+            <a class="btn btn-secondary" href="/join-class.html">Join Live Class</a>
+          </div>
+          <div class="briefing-grid">
+            <article class="briefing-card">
+              <strong>Student Offline</strong>
+              <p>Use Find Tutor for home tuition in your city or area.</p>
+            </article>
+            <article class="briefing-card">
+              <strong>Student Online</strong>
+              <p>Use Learn Online to request classes from home.</p>
+            </article>
+            <article class="briefing-card">
+              <strong>Tutor Section</strong>
+              <p>Join as an offline or online tutor through the teacher pages.</p>
+            </article>
+            <article class="briefing-card">
+              <strong>Live Class</strong>
+              <p>Open live class only after room code and password are shared.</p>
+            </article>
+          </div>
           <div class="hero-stats">
             <div>
               <strong>500+</strong>
@@ -434,11 +529,11 @@
       </div>
     </section>
 
-    <section class="section section-tint">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Popular Subjects</span>
-          <h2>Support across school and academic streams</h2>
+    <section class="section section-tint">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Popular Subjects</span>
+          <h2>Support across school and academic streams</h2>
         </div>
         <div class="subject-cloud">
           <span>Math</span>
@@ -450,8 +545,44 @@
           <span>Commerce</span>
           <span>Social Science</span>
         </div>
-      </div>
-    </section>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container feature-split">
+        <div>
+          <div class="section-heading align-left">
+            <span class="eyebrow">Choose Your Path</span>
+            <h2>Clear options for students and tutors</h2>
+            <p>Visitors can quickly understand whether they need offline tuition, online tuition, tutor registration, or the live class page.</p>
+          </div>
+          <div class="grid three-column">
+            <article class="card benefit-card">
+              <h3>Student Offline</h3>
+              <p>Parents and students can request local home tutors by subject, class, area, and timing.</p>
+              <a class="btn btn-secondary btn-block" href="/find-tutor.html">Go to Find Tutor</a>
+            </article>
+            <article class="card benefit-card">
+              <h3>Student Online</h3>
+              <p>Students who want online classes can submit requirements through a clean online enquiry form.</p>
+              <a class="btn btn-secondary btn-block" href="/learn-online.html">Go to Learn Online</a>
+            </article>
+            <article class="card benefit-card">
+              <h3>Tutor Offline and Online</h3>
+              <p>Teachers can join for home tuition through Become a Tutor or for digital teaching through Teach Online.</p>
+              <a class="btn btn-primary btn-block" href="/teach-online.html">Go to Teacher Pages</a>
+            </article>
+          </div>
+        </div>
+        <aside class="card highlight-panel">
+          <h3>Best customer flow</h3>
+          <p>First guide the visitor to the correct student or tutor section. Then send the live class page only when the class is confirmed.</p>
+          <a class="btn btn-primary btn-block" href="/find-tutor.html">Student Start Here</a>
+          <a class="btn btn-secondary btn-block" href="/tutor.html">Tutor Start Here</a>
+          <a class="btn btn-secondary btn-block" href="/join-class.html">Open Live Class</a>
+        </aside>
+      </div>
+    </section>
 
     <section class="section">
       <div class="container feature-split">
