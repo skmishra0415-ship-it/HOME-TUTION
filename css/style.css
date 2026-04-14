@@ -640,3 +640,126 @@ textarea:focus {
 .hidden {
   display: none !important;
 }
+@media (max-width: 1080px) {
+  .hero-grid,
+  .profile-layout,
+  .search-layout,
+  .feature-split,
+  .contact-grid,
+  .admin-layout,
+  .footer-grid,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .three-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-panel,
+  .sticky-card {
+    position: static;
+  }
+}
+
+@media (max-width: 820px) {
+  .brand {
+    align-items: flex-start;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 78px;
+    left: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero-stats,
+  .two-column,
+  .three-column,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section,
+  .hero-section,
+  .page-hero {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    min-height: 74px;
+  }
+
+  .brand {
+    gap: 0.65rem;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-title {
+    font-size: 0.88rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .container {
+    width: min(100% - 1.25rem, var(--container));
+  }
+
+  .hero-copy h1,
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .tutor-top,
+  .profile-header,
+  .lead-card-header,
+  .button-row,
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn,
+  .btn-sm {
+    width: 100%;
+  }
+}

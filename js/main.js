@@ -71,8 +71,8 @@ function createTutorCardHTML(tutor) {
         <span><strong>Experience:</strong> ${tutor.experience} years</span>
       </div>
       <div class="button-row">
-        <a class="btn btn-secondary" href="../pages/tutor-profile.html?id=${tutor.id}" data-tutor-id="${tutor.id}">View Profile</a>
-        <a class="btn btn-primary" href="../pages/request-tutor.html?id=${tutor.id}" data-tutor-id="${tutor.id}">Request Tutor</a>
+        <a class="btn btn-secondary" href="/student.html?id=${tutor.id}" data-tutor-id="${tutor.id}">Select Tutor</a>
+        <a class="btn btn-primary" href="/student.html?id=${tutor.id}" data-tutor-id="${tutor.id}">Request Tutor</a>
       </div>
     </article>
   `;
